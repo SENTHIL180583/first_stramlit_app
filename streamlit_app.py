@@ -35,8 +35,7 @@ try:
       back_from_function=get_fruityvice_data(fruit_choice)
       streamlit.dataframe(back_from_function)
 except URLError as e:
-streamlit.write('The user entered ', fruit_choice)
-streamlit.stop()
+#streamlit.write('The user entered ', fruit_choice)
 my_cnx = snowflake.connector.connect(**streamlit.secrets["snowflake"])
 my_cur = my_cnx.cursor()
 my_cur.execute("SELECT * from fruit_load_list")
