@@ -1,2 +1,1 @@
 snowflake-connector-python
-ciffi=1.15.0
